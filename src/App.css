@@ -13,3 +13,203 @@ body {
 #page-content {
   flex-grow: 2;
 }
+
+/* Images container */
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Image card */
+.image-card {
+  width: calc(45% - 20px); /* Adjust the width of each card */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Box shadow effect */
+  overflow: hidden;
+}
+
+/* Image title */
+.image-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Image */
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.new-user-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.new-user-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+.Header button {
+  background-color: rgb(10, 95, 214);
+  margin-right: 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+}
+
+.Header button:hover {
+  background-color: rgb(7, 53, 117);
+}
+
+.Header button a {
+  text-decoration: none;
+  color: white;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.profile-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-container hr {
+  margin: 20px 0;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info h4 {
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  color: #666;
+}
+
+.CreateButton {
+  background-color: rgb(10, 95, 214);
+  margin-right: 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+}
+
+.CreateButton:hover {
+  background-color: rgb(8, 57, 127);
+}
+
+.CreateButton a {
+  text-decoration: none;
+  color: white;
+}

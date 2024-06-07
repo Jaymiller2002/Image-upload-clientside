@@ -1,49 +1,51 @@
-import React, { useContext, useState } from "react"
-
-import { AuthContext } from "./context"
-import { getToken } from "./api"
-import CreateNewUser from "./CreateNewUser"
-
+import React, { useContext, useState } from "react";
+import { AuthContext } from "./context";
+import { getToken } from "./api";
+import CreateNewUser from "./CreateNewUser";
+import "./App.css"; // Import the CSS file
+import { Link } from "react-router-dom";
 
 function Login() {
-  const { auth } = useContext(AuthContext)
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const { auth } = useContext(AuthContext);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const submit = () => {
-    getToken({ auth, username, password })
-  }
+    getToken({ auth, username, password });
+  };
 
   return (
-    <div className="p-5">
-
+    <div className="container">
       <h1>Login</h1>
-      <div>
-        <div>Username:</div>
+      <div className="input-group">
+        <label htmlFor="username">Username:</label>
         <input
-          onChange={(e) => setUsername(e.target.value)}
+          type="text"
+          id="username"
           value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
 
-      <div>
-        <div>Password:</div>
+      <div className="input-group">
+        <label htmlFor="password">Password:</label>
         <input
-          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          id="password"
           value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
 
-      <div style={{ marginTop: 20 }}>
-        <button onClick={() => submit()}>Submit</button>
-      </div>
+      <button className="btn-submit" onClick={submit}>
+        Submit
+      </button>
 
       <hr />
-
-      <CreateNewUser />
-
+        <button className="CreateButton"><Link to='/CreateNewUser'>Create User</Link></button>
+        {/* <CreateNewUser /> */}
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
