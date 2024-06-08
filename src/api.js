@@ -79,18 +79,17 @@ export const createImage = ({ title, image, auth }) => {
   })
 }
 
-export const updateImage = ({ auth, imageId, title }) => {
-  console.log("AUTH, IMAGEID, TITLE: ", auth, imageId, title)
+export const updateImage = ({ auth, imageId, updatedData }) => {
+  console.log("AUTH, IMAGEID, TITLE: ", auth)
   return axios({
     method: 'put',
-    url: `${baseUrl}/get-images/${title}/`,
+    url: `${baseUrl}/get-images/${imageId}/`,
     headers: {
       Authorization: `Bearer ${auth.accessToken}`,
       'Content-Type': 'application/json'
     },
     data: {
-      image: imageId,
-      title: title
+      updatedData
     }
   });
 };

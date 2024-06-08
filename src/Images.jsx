@@ -19,20 +19,20 @@ const Images = () => {
     }, [auth.accessToken]);
 
     const handleUpdateImage = (imageId, updatedData) => {
-        updateImage({ auth, imageId, imageData: updatedData })
+        updateImage({ auth, imageId, updatedData })
             .then((response) => {
                 console.log('UPDATE IMAGE: RESPONSE', response);
                 // Assuming you want to update the state with the updated image
                 const updatedImages = images.map(image => {
                     if (image.id === imageId) {
-                        return response.data;
+                        return response.data; // Replace the image with the updated one
                     }
                     return image;
                 });
                 setImages(updatedImages);
             })
             .catch(error => console.log('ERROR: ', error));
-    };
+    };    
 
     // const handleDeleteImage = (imageId) => {
     //     deleteImage({ auth, imageId })
